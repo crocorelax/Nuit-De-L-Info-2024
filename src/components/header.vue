@@ -1,7 +1,7 @@
 <template>
     <header class="home-header">
-      <!-- Logo à gauche -->
-      <div class="logo" @mouseover="logoHover = true" @mouseleave="logoHover = false" @click="toggleMenu">
+      <!-- Logo à gauche redirige vers la page d'accueil -->
+      <div class="logo" @mouseover="logoHover = true" @mouseleave="logoHover = false" @click="goHome">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
           <circle cx="20" cy="20" r="18" stroke="#3498db" stroke-width="4"/>
           <!-- Logo SVG -->
@@ -22,10 +22,10 @@
     <!-- Menu latéral à droite -->
     <div v-if="menuOpen" class="side-menu">
       <ul>
-        <li>Menu Item 1</li>
-        <li>Menu Item 2</li>
-        <li>Menu Item 3</li>
-        <li>Menu Item 4</li>
+        <li @click="toggleMenu">Menu Item 1</li>
+        <li @click="toggleMenu">Menu Item 2</li>
+        <li @click="toggleMenu">Menu Item 3</li>
+        <li @click="toggleMenu">Menu Item 4</li>
       </ul>
     </div>
   </template>
@@ -42,6 +42,9 @@
     methods: {
       toggleMenu() {
         this.menuOpen = !this.menuOpen;
+      },
+      goHome() {
+        window.location.href = '/';  // Redirige vers la page d'accueil
       }
     }
   };
