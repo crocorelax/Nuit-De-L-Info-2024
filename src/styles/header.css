@@ -13,39 +13,53 @@
     box-shadow: 0 6px 15px var(--shadow-color);
   }
   
-  /* Logo */
-  .logo {
+ /* Logo */
+.logo {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour l'effet de lumière */
-    z-index: 25; /* Assurer que le logo soit toujours au-dessus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 25;
   }
   
-  /* Logo en rouge sans fond blanc */
-  .logo img {
+  /* Appliquer une couleur rouge au logo SVG */
+  .logo svg {
     width: 40px;
     height: 40px;
-    fill: var(--primary-color); /* Appliquer la couleur rouge au logo */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transition pour l'effet de survol */
+    fill: var(--primary-color); /* Applique la couleur rouge */
+    transition: filter 0.3s ease;
   }
   
-  /* Effet de reflets lumineux autour du logo sous forme de traits */
+  /* Effet de reflets lumineux en diagonale */
   .logo:hover::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--highlight-light);
-    border-radius: 50%;
-    box-shadow: 0 0 15px var(--highlight-light), 
-                0 0 25px var(--highlight-light), 
-                0 0 35px var(--highlight-light); /* Effet lumineux autour du logo */
-    animation: lightEffect 1.5s linear infinite; /* Animation des traits lumineux */
+    top: -20%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, var(--highlight-light), transparent);
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: lightSweep 1.5s ease-in-out infinite;
+  }
+  
+  /* Animation de balayage diagonal */
+  @keyframes lightSweep {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(100%) rotate(45deg);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateX(200%) rotate(45deg);
+      opacity: 0;
+    }
   }
   
   /* Animation des traits lumineux autour du logo */
