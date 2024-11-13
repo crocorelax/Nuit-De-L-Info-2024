@@ -1,12 +1,17 @@
-<!-- App.vue -->
 <template>
-  <router-view /> <!-- Affiche les pages selon les routes configurées (comme Home.vue) -->
-</template>
-
-<script>
-export default {
-  name: "App",
-};
-</script>
-
-<style src="./styles/main.scss"></style> <!-- Lien vers main.css -->
+    <div id="app">
+      <h1>Bienvenue sur mon site</h1>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'App',
+  };
+  </script>
+  
+  <style>
+  @import './styles/variables.css';
+  @import './styles/main.css';
+  </style>
+  
