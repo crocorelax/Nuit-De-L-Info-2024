@@ -1,12 +1,12 @@
 /* src/styles/variables.css */
 :root {
-  /* Police moderne et lisible */
   --font-family: 'Poppins', sans-serif;
-
-  /* Couleurs */
-  --color-primary: #C3073F;  /* Couleur dominante du site */
-  --color-secondary: #6F2232; /* Couleur secondaire */
-  --color-tertiary: #950740;  /* Couleur d'accentuation */
-  --color-background: #1A1A1D; /* Fond principal du site */
-  --color-text: #4E4E50; /* Couleur des textes */
+  --primary-color: #6F2232; /* Rouge principal */
+  --secondary-color: #4E4E50;
+  --tertiary-color: #C3073F; /* Rouge plus clair */
+  --header-background: #333333;  /* Gris sombre pour le header */
+  --background-color: #F2F2F2; /* Couleur de fond générale */
+  --side-menu-background: rgba(195, 7, 63, 0.9);  /* Menu rouge translucide */
+  --shadow-color: rgba(0, 0, 0, 0.15); /* Ombre douce */
+  --highlight-light: #FF6F61; /* Rouge clair pour l'effet lumineux */
 }
