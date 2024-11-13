@@ -16,8 +16,8 @@
       </div>
     </header>
   
-    <!-- Menu latéral à droite -->
-    <div v-if="menuOpen" class="side-menu">
+    <!-- Menu latéral translucide rouge -->
+    <div v-if="menuOpen" class="side-menu" @click.self="toggleMenu">
       <ul>
         <li @click="toggleMenu">Menu Item 1</li>
         <li @click="toggleMenu">Menu Item 2</li>
