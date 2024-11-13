@@ -1,7 +1,7 @@
-/* main.scss */
-@use './variables' as *;
+/* main.css */
+@import './variables.css';
 
 body {
-  font-family: $font-family;
-  background-color: $primary-color;
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
 }

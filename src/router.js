@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue'; // Vérifie que le chemin est correct
+import Home from './views/Home.vue'; // Vérifie que le chemin est correct
 
 const routes = [
   {
