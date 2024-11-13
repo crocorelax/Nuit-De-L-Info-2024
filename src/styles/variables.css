@@ -1,12 +1,13 @@
 /* src/styles/variables.css */
 :root {
   --font-family: 'Poppins', sans-serif;
-  --primary-color: #6F2232; /* Rouge principal */
+  --primary-color: #6F2232; /* Rouge pour le logo */
   --secondary-color: #4E4E50;
-  --tertiary-color: #C3073F; /* Rouge plus clair */
+  --tertiary-color: #C3073F; /* Rouge clair */
   --header-background: #333333;  /* Gris sombre pour le header */
-  --background-color: #F2F2F2; /* Couleur de fond générale */
-  --side-menu-background: rgba(195, 7, 63, 0.9);  /* Menu rouge translucide */
+  --background-color: #F2F2F2; /* Fond blanc pour la page */
+  --side-menu-background: rgba(195, 7, 63, 0.85);  /* Menu légèrement plus transparent */
   --shadow-color: rgba(0, 0, 0, 0.15); /* Ombre douce */
   --highlight-light: #FF6F61; /* Rouge clair pour l'effet lumineux */
+  --logo-white: #FFFFFF; /* Blanc pour le fond du logo */
 }
