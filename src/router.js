@@ -1,14 +1,17 @@
-// src/router.js
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './views/Home.vue';
+import Home from '../views/Home.vue'; // Vérifie que le chemin est correct
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  // Ajoute d'autres routes ici au besoin
+  {
+    path: '/',
+    name: 'Home',
+    component: Home, // Assure-toi que Home.vue est correctement importé
+  },
+  // D'autres routes ici si nécessaire
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 

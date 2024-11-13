@@ -1,14 +1,15 @@
+<!-- src/App.vue -->
 <template>
     <div id="app">
-      <h1>Bienvenue sur mon site</h1>
+      <router-view></router-view> <!-- Affiche le composant correspondant à la route -->
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   export default {
     name: 'App',
   };
-  </script>
+</script>
   
   <style>
   @import './styles/variables.css';
