@@ -9,4 +9,4 @@ export default {
 };
 </script>
 
-<style src="./styles/main.css"></style> <!-- Lien vers main.css -->
+<style src="./styles/main.scss"></style> <!-- Lien vers main.css -->
