@@ -1,6 +1,12 @@
-/* variables.css */
+/* src/styles/variables.css */
 :root {
-    --font-family: 'Arial', sans-serif;
-    --primary-color: #3498db;
-  }
-  
+  /* Police moderne et lisible */
+  --font-family: 'Poppins', sans-serif;
+
+  /* Couleurs */
+  --color-primary: #C3073F;  /* Couleur dominante du site */
+  --color-secondary: #6F2232; /* Couleur secondaire */
+  --color-tertiary: #950740;  /* Couleur d'accentuation */
+  --color-background: #1A1A1D; /* Fond principal du site */
+  --color-text: #4E4E50; /* Couleur des textes */
+}

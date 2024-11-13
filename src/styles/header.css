@@ -6,30 +6,32 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #3498db;
+    background-color: var(--color-primary);  /* Utilisation de la couleur principale */
     color: white;
     position: relative;
-  }
-  
-  /* Logo */
-  .logo {
+}
+
+/* Logo */
+.logo {
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  .logo:hover svg {
+}
+
+/* Effet sur le logo au survol */
+.logo:hover svg {
     filter: brightness(1.5);
-  }
-  
-  /* Titre au centre */
-  .title {
+}
+
+/* Titre au centre */
+.title {
     font-size: 1.5rem;
     text-align: center;
     flex-grow: 1;
-  }
-  
-  /* Menu hamburger à droite */
-  .menu-icon {
+    font-family: var(--font-family); /* Appliquer la nouvelle police */
+}
+
+/* Menu hamburger à droite */
+.menu-icon {
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -37,56 +39,59 @@
     align-items: center;
     width: 30px;
     height: 30px;
-  }
-  
-  .line {
+}
+
+.line {
     width: 100%;
     height: 4px;
     background-color: white;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .line.open:nth-child(1) {
+}
+
+/* Animation du menu hamburger quand ouvert */
+.line.open:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .line.open:nth-child(2) {
+}
+
+.line.open:nth-child(2) {
     opacity: 0;
-  }
-  
-  .line.open:nth-child(3) {
+}
+
+.line.open:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* Menu latéral */
-  .side-menu {
+}
+
+/* Menu latéral */
+.side-menu {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-    background-color: #2c3e50;
+    background-color: var(--color-secondary);  /* Utilisation de la couleur secondaire */
     width: 250px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
-  .side-menu ul {
+}
+
+/* Liste des items du menu */
+.side-menu ul {
     list-style-type: none;
     padding: 0;
     color: white;
-  }
-  
-  .side-menu li {
+}
+
+/* Style des éléments de menu */
+.side-menu li {
     margin: 1rem 0;
     font-size: 1.2rem;
     cursor: pointer;
-  }
-  
-  .side-menu li:hover {
-    background-color: #34495e;
+}
+
+/* Effet de survol sur les items de menu */
+.side-menu li:hover {
+    background-color: var(--color-tertiary); /* Utilisation de la couleur d'accentuation */
     padding: 0.5rem;
     border-radius: 5px;
-  }
-  
+}
