@@ -45,3 +45,7 @@ export default {
   },
 };
 </script>  
+
+<style scoped>
+@import '@/styles/header.css'; /* Si le fichier CSS est dans le dossier assets/styles */
+</style>
