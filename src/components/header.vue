@@ -1,6 +1,7 @@
 <template>
     <header class="home-header">
       <!-- Importer le logo SVG -->
+      <Logo class="logo" />
     
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
