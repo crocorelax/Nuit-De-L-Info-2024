@@ -1,7 +1,7 @@
 <template>
     <header class="home-header">
       <!-- Importer le logo SVG -->
-      <MyLogo class="logo" @mouseover="logoHover = true" @mouseleave="logoHover = false" />
+      <Logo class="logo" />
     
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
@@ -26,10 +26,13 @@
   </template>
   
   <script>
-  import MyLogo from '@/assets/images/Logo.svg'; // Assurez-vous que le chemin est correct
+  import Logo from '@/assets/images/Logo.svg'; // Assurez-vous que le chemin est correct
   
   export default {
     name: "Header",
+    components: {
+        Logo
+    },
     data() {
       return {
         logoHover: false,
