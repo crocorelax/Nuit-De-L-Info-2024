@@ -1,11 +1,11 @@
 <template>
     <header class="home-header">
-      <!-- Importer le logo SVG -->
+      <!-- Importer le logo SVG comme composant Vue -->
       <Logo class="logo" />
-    
+      
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
-    
+      
       <!-- Menu hamburger à droite -->
       <div class="menu-icon" @click="toggleMenu">
         <div class="line" :class="{ 'open': menuOpen }"></div>
@@ -26,30 +26,38 @@
   </template>
   
   <script>
-  import Logo from '@/assets/images/Logo.svg'; // Assurez-vous que le chemin est correct
+  // Assurez-vous que le chemin est correct pour le fichier SVG
+  import Logo from '@/assets/images/Logo.svg';
   
   export default {
     name: "Header",
     components: {
-        Logo
+      Logo
     },
     data() {
       return {
-        logoHover: false,
         menuOpen: false
       };
     },
     methods: {
       toggleMenu() {
         this.menuOpen = !this.menuOpen;
-      },
-      goHome() {
-        window.location.href = '/';  // Redirige vers la page d'accueil
       }
     }
   };
   </script>
   
-  <!-- Importation du fichier CSS -->
-  <style scoped src="../styles/header.css"></style>
+  <style scoped>
+  /* Logo */
+  .logo {
+    width: 50px;  /* Ajustez la taille du logo */
+    height: auto;
+    transition: fill 0.3s ease; /* Transition pour changer la couleur */
+  }
+  
+  /* Change la couleur au survol */
+  .logo:hover {
+    fill: var(--primary-color); /* Couleur du logo au survol */
+  }
+  </style>
   
