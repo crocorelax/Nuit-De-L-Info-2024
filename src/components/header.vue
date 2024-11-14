@@ -1,7 +1,7 @@
 <template>
     <header class="home-header">
-      <!-- Importer le logo SVG comme image -->
-      <img :src="Logo" alt="Logo" class="logo" />
+      <!-- Importer le logo SVG comme composant Vue -->
+      <Logo class="logo" />
   
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
@@ -26,10 +26,14 @@
   </template>
   
   <script>
-    import Logo from '@/assets/images/Logo.svg';
-
+  // Importation du logo SVG comme composant Vue
+  import Logo from '@/assets/images/Logo.svg';
+  
   export default {
     name: "Header",
+    components: {
+      Logo, // Déclare le composant SVG
+    },
     data() {
       return {
         menuOpen: false,

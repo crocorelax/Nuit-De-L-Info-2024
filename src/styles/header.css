@@ -15,12 +15,12 @@
   .logo {
     width: 50px;  /* Taille du logo */
     height: auto;
-    transition: filter 0.3s ease; /* Transition pour appliquer un filtre */
+    transition: fill 0.3s ease; /* Transition pour changer la couleur */
   }
   
   /* Changer la couleur du logo au survol */
   .logo:hover {
-    filter: hue-rotate(180deg); /* Appliquer un changement de couleur */
+    fill: var(--primary-color); /* Couleur que vous voulez appliquer au survol */
   }
   
   /* Titre au centre */
