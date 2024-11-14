@@ -1,133 +1,103 @@
-<style scoped>
-/* Définition des couleurs */
-:root {
-  --tertiary-color: #c3073f; /* Rouge clair */
-  --highlight-light: #ff6f61; /* Rouge clair pour l'effet lumineux */
-  --header-background: #333; /* Exemple de fond du header */
-  --shadow-color: rgba(0, 0, 0, 0.5);
-  --side-menu-background: rgba(255, 99, 71, 0.9); /* Rouge translucide pour le menu latéral */
-}
-
 /* Conteneur du header */
 .home-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--header-background);
-  color: white;
-  position: relative;
-  z-index: 20;
-  box-shadow: 0 6px 15px var(--shadow-color);
-}
-
-/* Logo */
-.logo {
-  width: 50px;  /* Taille du logo */
-  height: auto;
-  transition: fill 0.3s ease; /* Transition pour changer la couleur */
-}
-
-/* Changer la couleur du logo au survol */
-.logo:hover {
-  fill: var(--highlight-light); /* Couleur que vous voulez appliquer au survol */
-}
-
-/* Effet lumineux avec lignes diagonales */
-.logo:hover .logo-path::before,
-.logo:hover .logo-path::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, transparent, var(--highlight-light), transparent);
-  background-size: 200% 200%;
-  animation: diagonal-lines 1s infinite;
-}
-
-@keyframes diagonal-lines {
-  0% {
-    background-position: 200% 200%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-background);
+    color: white;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 6px 15px var(--shadow-color);
   }
-  100% {
-    background-position: 0 0;
+  
+  /* Logo */
+  .logo {
+    width: 100px;  /* Taille du logo ajustée */
+    height: auto;  /* Garde la proportion du logo */
+    transition: fill 0.3s ease; /* Transition pour changer la couleur */
   }
-}
-
-/* Titre au centre */
-.title {
-  font-size: 1.5rem;
-  text-align: center;
-  flex-grow: 1;
-  font-family: Arial, sans-serif; /* Exemple de police */
-}
-
-/* Menu hamburger à droite */
-.menu-icon {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  z-index: 30;
-}
-
-.line {
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.line.open:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.line.open:nth-child(2) {
-  opacity: 0;
-}
-
-.line.open:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Menu latéral translucide rouge */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--side-menu-background);  /* Menu avec fond rouge translucide */
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  box-shadow: 0 4px 10px var(--shadow-color);
-}
-
-/* Liste des items du menu */
-.side-menu ul {
-  list-style-type: none;
-  padding: 0;
-  color: white;
-  text-align: center;
-}
-
-/* Style des éléments de menu */
-.side-menu li {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Effet de survol sur les items de menu */
-.side-menu li:hover {
-  background-color: var(--tertiary-color);
-  pad
+  
+  /* Changer la couleur du logo au survol */
+  .logo:hover {
+    fill: var(--highlight-light); /* Couleur rouge clair appliquée au survol */
+  }
+  
+  /* Titre au centre */
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    font-family: var(--font-family);
+  }
+  
+  /* Menu hamburger à droite */
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    z-index: 30;
+  }
+  
+  .line {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .line.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Menu latéral translucide rouge */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--side-menu-background);  /* Menu avec fond rouge translucide */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px var(--shadow-color);
+  }
+  
+  /* Liste des items du menu */
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Style des éléments de menu */
+  .side-menu li {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Effet de survol sur les items de menu */
+  .side-menu li:hover {
+    background-color: var(--tertiary-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
