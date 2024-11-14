@@ -26,7 +26,7 @@
   </template>
   
   <script>
-  import MyLogo from '@/assets/images/logo.svg'; // Assurez-vous que le chemin est correct
+  import MyLogo from '@/assets/images/Logo.svg'; // Assurez-vous que le chemin est correct
   
   export default {
     name: "Header",
