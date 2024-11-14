@@ -1,4 +1,5 @@
-/* Conteneur du header */
+/* styles/header.css */
+
 .home-header {
     display: flex;
     justify-content: space-between;
@@ -11,19 +12,16 @@
     box-shadow: 0 6px 15px var(--shadow-color);
   }
   
-  /* Logo */
   .logo {
-    width: 100px;  /* Taille du logo ajustée */
-    height: auto;  /* Garde la proportion du logo */
-    transition: fill 0.3s ease; /* Transition pour changer la couleur */
+    width: 100px;
+    height: auto;
+    transition: fill 0.3s ease;
   }
   
-  /* Changer la couleur du logo au survol */
   .logo:hover {
-    fill: var(--highlight-light); /* Couleur rouge clair appliquée au survol */
+    fill: var(--highlight-light);
   }
   
-  /* Titre au centre */
   .title {
     font-size: 1.5rem;
     text-align: center;
@@ -31,7 +29,6 @@
     font-family: var(--font-family);
   }
   
-  /* Menu hamburger à droite */
   .menu-icon {
     cursor: pointer;
     display: flex;
@@ -62,14 +59,13 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
   
-  /* Menu latéral translucide rouge */
   .side-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--side-menu-background);  /* Menu avec fond rouge translucide */
+    background-color: var(--side-menu-background);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -79,7 +75,6 @@
     box-shadow: 0 4px 10px var(--shadow-color);
   }
   
-  /* Liste des items du menu */
   .side-menu ul {
     list-style-type: none;
     padding: 0;
@@ -87,14 +82,12 @@
     text-align: center;
   }
   
-  /* Style des éléments de menu */
   .side-menu li {
     margin: 1rem 0;
     font-size: 1.5rem;
     cursor: pointer;
   }
   
-  /* Effet de survol sur les items de menu */
   .side-menu li:hover {
     background-color: var(--tertiary-color);
     padding: 0.5rem;
