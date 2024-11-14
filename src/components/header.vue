@@ -1,9 +1,13 @@
 <template>
     <header class="home-header">
-      <!-- Logo à gauche redirige vers la page d'accueil -->
-      <div class="logo" @mouseover="logoHover = true" @mouseleave="logoHover = false" @click="goHome">
-        <img src="@/assets/images/Logo.svg" alt="Logo" width="40" height="40" />
-      </div>
+        <!-- Logo à gauche redirige vers la page d'accueil -->
+        <div class="logo" @mouseover="logoHover = true" @mouseleave="logoHover = false" @click="goHome">
+            <!-- Contenu complet de ton SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
+            <circle cx="20" cy="20" r="18" />
+            <!-- Remplace ici avec les autres éléments de ton SVG original -->
+            </svg>
+        </div>
   
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
