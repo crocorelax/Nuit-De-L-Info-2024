@@ -41,8 +41,5 @@
   };
   </script>
   
-  <style>
-    /* Importation du fichier CSS */
-    @import './styles/header.css'; /* Correctement ajusté pour le dossier src/styles */
-  </style>
+  <style scoped src="../styles/header.css"></style>
   
