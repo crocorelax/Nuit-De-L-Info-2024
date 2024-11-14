@@ -1,7 +1,7 @@
 <template>
     <header class="home-header">
       <!-- Importer le logo SVG comme image -->
-      <img src="@/assets/images/Logo.svg" alt="Logo" class="logo" />
+      <Logo class="logo" />
   
       <!-- Titre au centre -->
       <h1 class="title">Nuit de l'Info</h1>
@@ -26,8 +26,13 @@
   </template>
   
   <script>
+    import Logo from '@/assets/images/Logo.svg';
+
   export default {
     name: "Header",
+    components: {
+    Logo,
+  },
     data() {
       return {
         menuOpen: false,
