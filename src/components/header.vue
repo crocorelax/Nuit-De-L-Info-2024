@@ -43,6 +43,6 @@
   
   <style>
     /* Importation du fichier CSS */
-    @import '@/styles/header.css'; /* Correctement ajusté pour le dossier src/styles */
+    @import './styles/header.css'; /* Correctement ajusté pour le dossier src/styles */
   </style>
   
