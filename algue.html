@@ -6,8 +6,25 @@
     <title>Le Rôle des Algues et du Phytoplancton dans l'Océan</title>
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src\css\map.css">
+    <link rel="stylesheet" href="src/css/huitre.css">
+    <link rel="stylesheet" href="src/css/fish.css">
 </head>
 <body>
+    
+  <div class="fish-layer"></div> <!-- Couche des poissons -->
+
+  <header class="main-header">
+      <a href="home.html">
+          <img src="src/assets/images/bateau.png" alt="Retour Accueil" class="home-logo">
+      </a>
+  </header>
+
+  
+  <div class="score-container">
+      <img src="src/assets/images/seau.png" alt="Seau">
+      <span class="score-count" id="score">0</span>
+  </div>
+  
     <div class="container">
         <section class="intro">
             <h1>Le Rôle Crucial des Algues et du Phytoplancton dans l'Écosystème Océanique</h1>
@@ -57,35 +74,40 @@
     
     <!-- Image de la boussole -->
     <div class="compass-container">
-        <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
-    </div>
-    
-    <!-- Carte modale -->
-    <div id="mapModal" class="map-container" >
-        <!-- Image de la carte -->
-        <img src="src\assets\images\map.png" alt="Carte">
+      <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+  </div>
   
-        <!-- Symboles sur la carte -->
-        <div class="symbol symbol1" onclick="window.location.href='algue.html'">
-          <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
-        </div>
-        <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
-          <img src="src/assets/images/huitre.png" alt="huitre">
-        </div>
-        <div class="symbol symbol3" onclick="window.location.href='courant.html'">
-          <img src="src/assets/images/courant.png" alt="courant">
-        </div>
-        <div class="symbol symbol4" onclick="window.location.href='corail.html'">
-          <img src="src/assets/images/corail.png" alt="corail">
-        </div>
-        <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
-          <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
-        </div>
-        <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
-          <img src="src/assets/images/mangrove.png" alt="Mangrove">
-        </div>
-    </div>
+  <!-- Carte modale -->
+  <div id="mapModal" class="map-container" >
+      <!-- Image de la carte -->
+      <img src="src\assets\images\map.png" alt="Carte">
 
-    <script src="src/js/map.js"></script>
+      <!-- Symboles sur la carte -->
+      <div class="symbol symbol1" onclick="window.location.href='algue.html'">
+        <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+      </div>
+      <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
+        <img src="src/assets/images/huitre.png" alt="huitre">
+      </div>
+      <div class="symbol symbol3" onclick="window.location.href='courant.html'">
+        <img src="src/assets/images/courant.png" alt="courant">
+      </div>
+      <div class="symbol symbol4" onclick="window.location.href='corail.html'">
+        <img src="src/assets/images/corail.png" alt="corail">
+      </div>
+      <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
+        <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+      </div>
+      <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
+        <img src="src/assets/images/mangrove.png" alt="Mangrove">
+      </div>
+  </div>
+  <!-- Conteneur pour les algues -->
+  <div class="algae-container">
+      <img src="src/assets/images/algue.png" alt="Algue Gauche" class="algae-left">
+      <img src="src/assets/images/algue.png" alt="Algue Droite" class="algae-right">
+  </div>
+  <script src="src/js/map.js"></script>
+  <script src="src/js/fish.js"></script>
 </body>
 </html>

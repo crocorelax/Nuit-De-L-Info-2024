@@ -1,0 +1,29 @@
+.huitre-page .intro{
+    margin-right: 17%;
+    margin-left: 17%;
+}
+
+.huitre-page .defintion{
+    margin-right: 13%;
+}
+
+.huitre-page .utilite{
+    margin-left: 14%;
+}
+
+
+.page-deco {
+    position: absolute;
+    bottom: 200px; /* juste au-dessus des algues */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1; /* Pour être au-dessus de l'arrière-plan global */
+}
+
+.page-deco .deco-item {
+    width: 80px;
+    height: auto;
+    opacity: 0.9;
+}

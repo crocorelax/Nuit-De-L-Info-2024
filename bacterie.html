@@ -6,8 +6,25 @@
     <title>Bactéries, Organismes Décomposeurs et leur Parallèle avec l'Estomac</title>
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src\css\map.css">
+    <link rel="stylesheet" href="src/css/huitre.css">
+    <link rel="stylesheet" href="src/css/fish.css">
 </head>
 <body>
+    
+    <div class="fish-layer"></div> <!-- Couche des poissons -->
+
+    <header class="main-header">
+        <a href="home.html">
+            <img src="src/assets/images/bateau.png" alt="Retour Accueil" class="home-logo">
+        </a>
+    </header>
+
+    
+    <div class="score-container">
+        <img src="src/assets/images/seau.png" alt="Seau">
+        <span class="score-count" id="score">0</span>
+    </div>
+    
     <div class="container">
         <section class="intro">
             <h1>Le Rôle des Bactéries et des Organismes Décomposeurs et leur Parallèle avec l'Estomac</h1>
@@ -85,6 +102,12 @@
           <img src="src/assets/images/mangrove.png" alt="Mangrove">
         </div>
     </div>
+    <!-- Conteneur pour les algues -->
+    <div class="algae-container">
+        <img src="src/assets/images/algue.png" alt="Algue Gauche" class="algae-left">
+        <img src="src/assets/images/algue.png" alt="Algue Droite" class="algae-right">
+    </div>
     <script src="src/js/map.js"></script>
+    <script src="src/js/fish.js"></script>
 </body>
 </html>

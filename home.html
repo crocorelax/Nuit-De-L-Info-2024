@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src\css\basic.css">
     <link rel="stylesheet" href="src\css\introduction.css">
+    <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src\css\map.css">
-    <title>Home Page</title> 
+    <link rel="stylesheet" href="src/css/fish.css">
+    <title>Home Page</title>
 </head>
+
 <body>
+
     <div class="intro">
-        
+
         <div class="texte">
             <h1>Bienvenue sur notre site !</h1>
-            <p>Bienvenue dans l'univers de notre site ! Tout au long de votre exploration, vous aurez l'occasion de résoudre des mini-jeux. Chaque jeu résolu vous rapportera des pièces.</p>
-            <p>Vous pourrez également vous rendre sur la page de pêche pour attraper des poissons, ou utiliser vos outils pour dépolluer les zones.</p>
-            <p>En plus de cela, vous avez accès à un marchand où vous pourrez acheter de meilleurs équipements et payer pour débloquer de nouvelles zones.</p>
+            <p>Bienvenue dans l'univers de notre site ! Tout au long de votre exploration, vous aurez l'occasion de
+                résoudre des mini-jeux. Chaque jeu résolu vous rapportera des pièces.</p>
+            <p>Vous pourrez également vous rendre sur la page de pêche pour attraper des poissons, ou utiliser vos
+                outils pour dépolluer les zones.</p>
+            <p>En plus de cela, vous avez accès à un marchand où vous pourrez acheter de meilleurs équipements et payer
+                pour débloquer de nouvelles zones.</p>
             <p>Bonne exploration !</p>
         </div>
-        
+
 
         <!-- Ancre pour faire défiler la page -->
         <div class="anchor" onclick="scrollToContent()">⚓</div>
@@ -28,44 +35,90 @@
         <div class="depth"></div>
     </div>
 
-        <div class="container" style="display:none;">
-            <!-- Contenu de la page -->
-            <h1>Bienvenue sur mon site</h1>
-            <p>Cliquez sur la boussole pour naviguer !</p>
 
-            <!-- Image de la boussole -->
-            <div class="compass-container">
-                <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+
+
+
+    <div class="container" style="display:none;">
+        <div class="fish-layer"></div> <!-- Couche des poissons -->
+
+        <header class="main-header">
+            <a href="home.html">
+                <img src="src/assets/images/bateau.png" alt="Retour Accueil" class="home-logo">
+            </a>
+        </header>
+
+
+        <div class="score-container">
+            <img src="src/assets/images/seau.png" alt="Seau">
+            <span class="score-count" id="score">0</span>
+        </div>
+
+        <h2>Boutique</h2>
+        <div class="shop">
+            <div class="item">
+                <h3>Filet amélioré</h3>
+                <p>Augmente les points obtenus par poisson de +1</p>
+                <p>Prix : <span class="item-price">10</span> pièces</p>
+                <button class="buy-button" data-item="filet">Acheter</button>
+            </div>
+
+            <div class="item">
+                <h3>Guide de pêche</h3>
+                <p>Augmente la chance d’apparition des poissons rares</p>
+                <p>Prix : <span class="item-price">20</span> pièces</p>
+                <button class="buy-button" data-item="guide">Acheter</button>
+            </div>
+
+            <div class="item">
+                <h3>Outils de dépollution</h3>
+                <p>Permet de dépolluer une zone de l'océan, aidant la faune à revenir</p>
+                <p>Prix : <span class="item-price">30</span> pièces</p>
+                <button class="buy-button" data-item="depollution">Acheter</button>
             </div>
         </div>
+
+        <!-- Image de la boussole -->
+        <div class="compass-container">
+            <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+        </div>
+
 
         <!-- Carte modale -->
-        <div id="mapModal" class="map-container" >
+        <div id="mapModal" class="map-container">
             <!-- Image de la carte -->
             <img src="src\assets\images\map.png" alt="Carte">
-      
+
             <!-- Symboles sur la carte -->
             <div class="symbol symbol1" onclick="window.location.href='algue.html'">
-              <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+                <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
             </div>
             <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
-              <img src="src/assets/images/huitre.png" alt="huitre">
+                <img src="src/assets/images/huitre.png" alt="huitre">
             </div>
             <div class="symbol symbol3" onclick="window.location.href='courant.html'">
-              <img src="src/assets/images/courant.png" alt="courant">
+                <img src="src/assets/images/courant.png" alt="courant">
             </div>
             <div class="symbol symbol4" onclick="window.location.href='corail.html'">
-              <img src="src/assets/images/corail.png" alt="corail">
+                <img src="src/assets/images/corail.png" alt="corail">
             </div>
             <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
-              <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+                <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
             </div>
             <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
-              <img src="src/assets/images/mangrove.png" alt="Mangrove">
+                <img src="src/assets/images/mangrove.png" alt="Mangrove">
             </div>
         </div>
-        
-    <script src="src/js/introduction.js"></script>
+
+        <script src="src/js/introduction.js"></script>
+        <!-- Conteneur pour les algues -->
+        <div class="algae-container">
+            <img src="src/assets/images/algue.png" alt="Algue Gauche" class="algae-left">
+            <img src="src/assets/images/algue.png" alt="Algue Droite" class="algae-right">
+        </div>
+    </div>
     <script src="src/js/map.js"></script>
+    <script src="src/js/fish.js"></script>
 </body>
+
 </html>

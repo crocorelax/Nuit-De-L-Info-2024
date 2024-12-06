@@ -1,45 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
     margin: 0;
-    padding: 0;
-    background: radial-gradient(circle at top, #095683, #08476D 45%, #074163 60%, #052B42 85%);
+    background: radial-gradient(circle at top, #095683, #063b5c 45%, #042b42 60%, #021622 85%);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
 }
 
-/* Cacher la barre de défilement pour les navigateurs basés sur WebKit */
+/* Cacher la barre de défilement */
 body::-webkit-scrollbar {
-    display: none;  /* Masque la barre de défilement */
+    display: none;  
 }
 
-
+/* Conteneur principal */
 .container {
     max-width: 1200px;
     margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1; /* Le contenu au-dessus du décor */
 }
 
+/* Couleurs des titres */
 h1, h2, h3 {
-    color: #006c4f;
+    color: #022c21;
 }
 
+/* Styles des sections */
 section {
-    background-color: #ffffff;
+    background-color: #ffffffa1;
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -49,7 +44,7 @@ section {
 }
 
 .intro h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
@@ -61,11 +56,13 @@ section {
 .content p {
     font-size: 1.1em;
     margin-top: 10px;
+    margin-left: 30px;
 }
 
 h3 {
     margin-top: 15px;
     font-size: 1.4em;
+    margin-left: 10px;
 }
 
 .content {
@@ -74,15 +71,14 @@ h3 {
 
 section h2 {
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 section p {
     margin-bottom: 10px;
 }
 
-
-/* Positionner la boussole en bas à droite */
+/* Position de la boussole */
 .compass-container {
     position: fixed;
     bottom: 40px;
@@ -93,4 +89,68 @@ section p {
 .compass {
     width: 80px;
     height: 80px;
+}
+
+/* --- Décor marin --- */
+
+body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Hauteur du bandeau de sable */
+    background: url('../assets/images/sand.png') no-repeat bottom center;
+    background-size: 100% 100%; /* Étire l'image pour remplir la zone définie */
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.algae-container {
+    position: absolute;
+    bottom: 100px; /* Position de base au-dessus du sable */
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none; /* Les algues ne gênent pas les clics sur le reste */
+}
+
+/* Algue de gauche */
+.algae-left {
+    position: absolute;
+    bottom: 0;     /* On la pose à la baseline du container */
+    left: 50px;     /* Décalage vers la gauche */
+    width: 120px;   /* Ajustez la taille selon votre goût */
+    height: auto;
+    opacity: 0.27;
+}
+
+/* Algue de droite */
+.algae-right {
+    position: absolute;
+    bottom: 0px;   /* Un léger décalage vertical pour éviter la symétrie */
+    right: 80px;     /* Décalage différent de l'algue de gauche */
+    width: 200px;    /* Une taille différente pour renforcer la dissymétrie */
+    height: auto;
+    opacity: 0.4;
+}
+
+
+/* Vous pourrez réintroduire ici ou ailleurs les bulles,
+   par exemple en ajoutant un autre pseudo-élément sur le body, 
+   ou via un élément HTML positionné en absolu. */
+
+/* Logo pour revenir à l’accueil */
+.main-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.home-logo {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
 }
