@@ -21,6 +21,21 @@ body{
     overflow: hidden;
     animation: gradientAnimation 10s infinite;
 }
+.boiteHead{
+    display: flex;
+}
+.accueilbutton{
+    content: "";
+    display: flex;
+    width: 80px;
+    height: 80px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px; 
+    vertical-align: middle;
+    margin-left: auto;
+    background-image: url('/src/assets/images/bateau.png');
+}
 .d20{
     display: none;
     height: 100px;
