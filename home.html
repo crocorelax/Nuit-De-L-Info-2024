@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src\css\basic.css">
     <link rel="stylesheet" href="src\css\introduction.css">
-    <script src="src/js/introduction.js"></script>
-    <script src="src/js/map.js"></script>
+    <link rel="stylesheet" href="src\css\map.css">
     <title>Home Page</title> 
 </head>
 <body>
@@ -36,20 +35,37 @@
 
             <!-- Image de la boussole -->
             <div class="compass-container">
-                <img src="src\assets\images\image.png" alt="Boussole" class="compass" onclick="openMap()">
+                <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
             </div>
         </div>
 
         <!-- Carte modale -->
-        <div id="mapModal" class="map-modal">
-            <div class="map-content">
-                <h2>Carte Interactive</h2>
-                <p>Explorez les lieux de votre site.</p>
-                <!-- Vous pouvez ajouter ici un lien vers un outil de carte ou un plan de navigation interne -->
-                <a href="#location1">Lieu 1</a>
-                <a href="#location2">Lieu 2</a>
-                <a href="#location3">Lieu 3</a>
+        <div id="mapModal" class="map-container" >
+            <!-- Image de la carte -->
+            <img src="src\assets\images\map.png" alt="Carte">
+      
+            <!-- Symboles sur la carte -->
+            <div class="symbol symbol1" onclick="window.location.href='page1.html'">
+              <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+            </div>
+            <div class="symbol symbol2" onclick="window.location.href='page2.html'">
+              <img src="src/assets/images/huitre.png" alt="huitre">
+            </div>
+            <div class="symbol symbol3" onclick="window.location.href='page3.html'">
+              <img src="src/assets/images/courant.png" alt="courant">
+            </div>
+            <div class="symbol symbol4" onclick="window.location.href='page4.html'">
+              <img src="src/assets/images/corail.png" alt="corail">
+            </div>
+            <div class="symbol symbol5" onclick="window.location.href='page5.html'">
+              <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+            </div>
+            <div class="symbol symbol6" onclick="window.location.href='page6.html'">
+              <img src="src/assets/images/mangrove.png" alt="Mangrove">
             </div>
         </div>
+        
+    <script src="src/js/introduction.js"></script>
+    <script src="src/js/map.js"></script>
 </body>
 </html>
