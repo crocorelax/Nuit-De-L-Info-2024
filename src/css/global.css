@@ -87,8 +87,8 @@ section p {
 }
 
 .compass {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 
 /* --- Décor marin --- */
@@ -153,4 +153,12 @@ body::before {
     width: 60px;
     height: auto;
     cursor: pointer;
+}
+
+.pirate-icon {
+    background-color: white;
+    width: 70px; /* Ajustez la taille selon vos préférences */
+    height: auto;
+    cursor: pointer;
+    margin-left: 20px;
 }

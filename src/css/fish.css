@@ -4,10 +4,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Derrière le contenu */
-    pointer-events: none; /* Par défaut, pas de clic sur la couche, 
-                             on réactivera au niveau des poissons */
+    z-index: -1; /* Assurez-vous que c'est au-dessus du reste */
+    pointer-events: auto;
 }
+
 
 /* Styles de base pour les poissons */
 .fish {
@@ -36,7 +36,7 @@
 */
 .content-layer {
     position: relative;
-    z-index: 1;
+    z-index: 100;
 }
 
 .score-container {

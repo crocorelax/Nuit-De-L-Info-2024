@@ -1,15 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Free Paul Watson</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Watson.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='basic.css'>
-    <script src='Watson.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Shepherd et Paul Watson</title>
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/map.css">
+    <link rel="stylesheet" href="src/css/huitre.css">
+    <link rel="stylesheet" href="src/css/fish.css">
 </head>
 <body>
     
+  <div class="fish-layer"></div> <!-- Couche des poissons -->
+
+  <header class="main-header">
+      <a href="home.html">
+          <img src="src/assets/images/bateau.png" alt="Retour Accueil" class="home-logo">
+      </a>
+      <a href="Watson.html">
+          <img src="src/assets/images/sea sheperd.png" alt="Page Sea Shepherd et Paul Watson" class="pirate-icon">
+      </a>
+  </header>
+
+  <div class="score-container">
+      <img src="src/assets/images/seau.png" alt="Seau">
+      <span class="score-count" id="score">0</span>
+  </div>
+  
+    <div class="container">
+        <section class="intro">
+            <h1>Sea Shepherd et Paul Watson</h1>
+            <p>Sea Shepherd est une organisation non gouvernementale internationale dédiée à la conservation de la vie marine. Fondée par le capitaine Paul Watson, l'organisation est connue pour ses actions directes visant à protéger les océans, la faune marine et les écosystèmes fragiles contre le braconnage, la surpêche, le brise-glace des glaces où vivent les phoques et la destruction de l'habitat marin.</p>
+        </section>
+
+        <section class="defintion">
+            <h2>Paul Watson : Un Défenseur des Océans</h2>
+            <div class="content">
+                <h3>Un Engagé de la Première Heure</h3>
+                <p>Paul Watson est un écologiste canadien et cofondateur de Greenpeace. Par la suite, il a fondé Sea Shepherd en 1977 après avoir estimé que des actions plus directes et déterminées étaient nécessaires pour protéger la vie marine. Sous sa direction, Sea Shepherd a mené de nombreuses campagnes pour sauver les baleines, les dauphins, les phoques, les requins et d’autres espèces menacées.</p>
+
+                <h3>Arrestation et Emprisonnement</h3>
+                <p>Paul Watson a fait face à plusieurs poursuites en raison de ses actions directes contre la pêche illégale. Dans certaines régions, il est recherché et a été arrêté à plusieurs reprises. Actuellement, il est sous le coup d’un mandat d'arrêt dans certains pays, ce qui limite sa liberté de mouvement et complique ses efforts de conservation. Ses partisans estiment que ses actions, bien que radicales, visent à faire appliquer des lois internationales déjà existantes pour protéger la faune marine.</p>
+            </div>
+        </section>
+
+        <section class="utilite">
+            <h2>Pourquoi Soutenir Paul Watson et Sea Shepherd ?</h2>
+            <div class="content">
+                <h3>Protection de la Biodiversité</h3>
+                <p>Les actions de Sea Shepherd ont permis de réduire le braconnage dans de nombreuses zones. Sans ces actions, la surpêche et la chasse illégale continueraient à décimer des populations entières d'espèces marines.</p>
+
+                <h3>Application des Lois Internationales</h3>
+                <p>Sea Shepherd agit là où les gouvernements échouent souvent, en faisant respecter les traités et lois internationales protégeant les océans. Sans leurs interventions, de nombreux règlements resteraient lettre morte.</p>
+
+                <h3>Sensibilisation du Public</h3>
+                <p>Les campagnes médiatisées de Sea Shepherd attirent l'attention du grand public sur la fragilité des écosystèmes marins et encouragent les individus à soutenir des politiques plus strictes pour la protection des océans.</p>
+            </div>
+        </section>
+
+        <section class="parallele">
+            <h2>Comment Aider ?</h2>
+            <p>Si vous souhaitez soutenir Paul Watson et Sea Shepherd, vous pouvez :</p>
+            <div class="content">
+                <h3>1. Signer la Pétition</h3>
+                <p><a href="https://seashepherd.fr/petitions/" target="_blank">Cliquez ici pour accéder à la pétition</a> et montrer votre soutien. Chaque signature renforce la pression internationale pour demander la libération de Paul Watson et un soutien accru aux missions de Sea Shepherd.</p>
+
+                <h3>2. Soutenir Sea Shepherd</h3>
+                <p>Vous pouvez faire un don, acheter des produits dérivés ou devenir bénévole. Ces actions aident à financer les campagnes de protection et à sensibiliser davantage le public.</p>
+
+                <h3>3. Faire Connaitre Leur Action</h3>
+                <p>Parlez-en autour de vous, partagez des articles et des vidéos sur Sea Shepherd et les enjeux de la conservation marine. Plus le message sera diffusé, plus l'impact sera grand.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Image de la boussole -->
+    <div class="compass-container">
+      <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+    </div>
+  
+    <!-- Carte modale -->
+    <div id="mapModal" class="map-container" >
+        <!-- Image de la carte -->
+        <img src="src\assets\images\map.png" alt="Carte">
+
+        <!-- Symboles sur la carte -->
+        <div class="symbol symbol1" onclick="window.location.href='algue.html'">
+          <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+        </div>
+        <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
+          <img src="src/assets/images/huitre.png" alt="huitre">
+        </div>
+        <div class="symbol symbol3" onclick="window.location.href='courant.html'">
+          <img src="src/assets/images/courant.png" alt="courant">
+        </div>
+        <div class="symbol symbol4" onclick="window.location.href='corail.html'">
+          <img src="src/assets/images/corail.png" alt="corail">
+        </div>
+        <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
+          <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+        </div>
+        <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
+          <img src="src/assets/images/mangrove.png" alt="Mangrove">
+        </div>
+    </div>
+
+    <!-- Conteneur pour les algues -->
+    <div class="algae-container">
+        <img src="src/assets/images/algue.png" alt="Algue Gauche" class="algae-left">
+        <img src="src/assets/images/algue.png" alt="Algue Droite" class="algae-right">
+    </div>
+
+    <script src="src/js/map.js"></script>
+    <script src="src/js/fish.js"></script>
 </body>
 </html>

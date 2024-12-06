@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src\css\map.css">
     <link rel="stylesheet" href="src/css/fish.css">
+    <link rel="stylesheet" href="src/css/boutique.css">
     <title>Home Page</title>
 </head>
 
@@ -46,6 +47,9 @@
             <a href="home.html">
                 <img src="src/assets/images/bateau.png" alt="Retour Accueil" class="home-logo">
             </a>
+            <a href="Watson.html">
+                <img src="src/assets/images/sea sheperd.png" alt="Page Sea Shepherd et Paul Watson" class="pirate-icon">
+            </a>
         </header>
 
 
@@ -54,28 +58,46 @@
             <span class="score-count" id="score">0</span>
         </div>
 
+        <!-- Boutique -->
         <h2>Boutique</h2>
         <div class="shop">
             <div class="item">
-                <h3>Filet amélioré</h3>
-                <p>Augmente les points obtenus par poisson de +1</p>
+                <h3>Amélioration du filet</h3>
+                <p>+1 point par poisson</p>
                 <p>Prix : <span class="item-price">10</span> pièces</p>
                 <button class="buy-button" data-item="filet">Acheter</button>
             </div>
 
             <div class="item">
                 <h3>Guide de pêche</h3>
-                <p>Augmente la chance d’apparition des poissons rares</p>
+                <p>Augmente la chance d'apparition des poissons rares</p>
                 <p>Prix : <span class="item-price">20</span> pièces</p>
                 <button class="buy-button" data-item="guide">Acheter</button>
             </div>
 
             <div class="item">
                 <h3>Outils de dépollution</h3>
-                <p>Permet de dépolluer une zone de l'océan, aidant la faune à revenir</p>
+                <p>Dépollue une zone (jusqu'à 5)</p>
                 <p>Prix : <span class="item-price">30</span> pièces</p>
                 <button class="buy-button" data-item="depollution">Acheter</button>
             </div>
+
+            <div class="item">
+                <h3>Amélioration du Rayon</h3>
+                <p>Augmente le radius de pêche, permettant d'attraper plusieurs poissons en un seul clic</p>
+                <p>Prix : <span class="item-price">25</span> pièces</p>
+                <button class="buy-button" data-item="radius">Acheter</button>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <h2>Vos Achievements</h2>
+        <div class="achievements">
+            <img src="src/assets/images/badge1.png" class="badge badge-1" alt="Badge 1">
+            <img src="src/assets/images/badge2.png" class="badge badge-2" alt="Badge 2">
+            <img src="src/assets/images/badge3.png" class="badge badge-3" alt="Badge 3">
+            <img src="src/assets/images/badge4.png" class="badge badge-4" alt="Badge 4">
+            <img src="src/assets/images/badge5.png" class="badge badge-5" alt="Badge 5">
         </div>
 
         <!-- Image de la boussole -->
@@ -119,6 +141,7 @@
     </div>
     <script src="src/js/map.js"></script>
     <script src="src/js/fish.js"></script>
+    <script src="src/js/boutique.js"></script>
 </body>
 
 </html>
