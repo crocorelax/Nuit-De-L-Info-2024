@@ -1,0 +1,61 @@
+/* Style de base pour la map-container */
+.map-container {
+    display: none;
+    position: fixed; /* Position fixe pour la rendre en overlay */
+    top: 50%; /* Centrage vertical */
+    left: 50%; /* Centrage horizontal */
+    transform: translate(-50%, -50%); /* Centrage exact */
+    height: 80%;
+    max-height: 800px; /* Taille maximale */
+    background-color: white; /* Fond blanc pour la carte */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Ombre autour de la popup */
+    z-index: 1000; /* Assurer que la popup est au-dessus du contenu */
+}
+
+/* Ajout d'un fond semi-transparent */
+.map-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: -1; /* En dessous de la carte */
+}
+
+/* Pour les symboles */
+.symbol {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.7); /* Bordure pour effet de zoom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.symbol:hover {
+    transform: scale(1); /* Zoom lorsqu'on survole */
+}
+
+.symbol img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Positionnement des symboles sur la carte */
+.symbol1 { top: 35%; left: 70%; }
+.symbol2 { top: 20%; left: 20%; }
+.symbol3 { top: 50%; left: 20%; }
+.symbol4 { top: 55%; left: 60%; }
+.symbol5 { top: 25%; left: 55%; }
+.symbol6 { top: 70%; left: 40%; }

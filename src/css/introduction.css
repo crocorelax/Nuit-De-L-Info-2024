@@ -1,0 +1,56 @@
+
+
+        /* Style pour l'intro */
+        .intro {
+            padding: 0;
+            height: 90vh;
+            width:80vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+
+        .intro .texte{
+            height:80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+
+        /* Style pour le titre et le texte de intro */
+        .Intro h1 {
+            margin-top: 10%;
+            font-size: 2.5em;
+        }
+
+        .Intro p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        /* Style pour l'ancre */
+        .anchor {
+            font-size: 3em;
+            position: absolute;
+            bottom: 30px;
+            cursor: pointer;
+            animation: bounce 1s infinite alternate; /* Animation de rebond */
+            z-index: 10;
+        }
+
+        /* Animation de rebond de l'ancre */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
