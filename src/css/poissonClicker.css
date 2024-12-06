@@ -1,0 +1,73 @@
+.jeu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body{
+    overflow: hidden;
+    background-color: aqua;
+}
+.poisson{
+    height: 25vh;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.imgMonnaie{
+    height: 5vh;
+}
+.argent{
+    font-size: 5vh;
+    margin-right: 10px;
+    margin-top: 0;
+}
+.bonus{
+    border: solid 2px black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 3vh;
+    transition: transform 0.3s ease;
+}
+.bonus:hover{
+    animation: wheelHueColor infinite 2s ;
+    transform: scale(1.5);
+}
+
+@keyframes wheelHueColor {
+    from, to { background-color: hsl(324, 70%, 45%); }
+    10%      { background-color: hsl(360, 65%, 45%); }
+    20%      { background-color: hsl( 36, 80%, 45%); }
+    30%      { background-color: hsl( 72, 75%, 35%); }
+    40%      { background-color: hsl(108, 65%, 35%); }
+    50%      { background-color: hsl(144, 75%, 35%); }
+    60%      { background-color: hsl(180, 75%, 35%); }
+    70%      { background-color: hsl(216, 60%, 45%); }
+    80%      { background-color: hsl(252, 65%, 50%); }
+    90%      { background-color: hsl(288, 60%, 40%); }
+}
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: #c6d9dfb9;
+    box-shadow: 0px 0px 7px #1c84e6da;
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(0.5);
+      opacity: 0;
+    }
+  }
