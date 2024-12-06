@@ -1,13 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <link rel="stylesheet" href="src\css\basic.css">
+    <link rel="stylesheet" href="src\css\introduction.css">
+    <link rel="stylesheet" href="src\css\map.css">
+    <title>Home Page</title> 
 </head>
 <body>
-    <h1>Bienvenue sur la page d'accueil</h1>
-    <p>Voici le contenu principal.</p>
+    <div class="intro">
+        
+        <div class="texte">
+            <h1>Bienvenue sur notre site !</h1>
+            <p>Bienvenue dans l'univers de notre site ! Tout au long de votre exploration, vous aurez l'occasion de résoudre des mini-jeux. Chaque jeu résolu vous rapportera des pièces.</p>
+            <p>Vous pourrez également vous rendre sur la page de pêche pour attraper des poissons, ou utiliser vos outils pour dépolluer les zones.</p>
+            <p>En plus de cela, vous avez accès à un marchand où vous pourrez acheter de meilleurs équipements et payer pour débloquer de nouvelles zones.</p>
+            <p>Bonne exploration !</p>
+        </div>
+        
 
+        <!-- Ancre pour faire défiler la page -->
+        <div class="anchor" onclick="scrollToContent()">⚓</div>
+
+        <!-- Effet de profondeur -->
+        <div class="depth-effect"></div>
+        <div class="depth"></div>
+    </div>
+
+        <div class="container">
+            <!-- Contenu de la page -->
+            <h1>Bienvenue sur mon site</h1>
+            <p>Cliquez sur la boussole pour naviguer !</p>
+
+            <!-- Image de la boussole -->
+            <div class="compass-container">
+                <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+            </div>
+        </div>
+
+        <!-- Carte modale -->
+        <div id="mapModal" class="map-container" >
+            <!-- Image de la carte -->
+            <img src="src\assets\images\map.png" alt="Carte">
+      
+            <!-- Symboles sur la carte -->
+            <div class="symbol symbol1" onclick="window.location.href='page1.html'">
+              <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+            </div>
+            <div class="symbol symbol2" onclick="window.location.href='page2.html'">
+              <img src="src/assets/images/huitre.png" alt="huitre">
+            </div>
+            <div class="symbol symbol3" onclick="window.location.href='page3.html'">
+              <img src="src/assets/images/courant.png" alt="courant">
+            </div>
+            <div class="symbol symbol4" onclick="window.location.href='page4.html'">
+              <img src="src/assets/images/corail.png" alt="corail">
+            </div>
+            <div class="symbol symbol5" onclick="window.location.href='page5.html'">
+              <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+            </div>
+            <div class="symbol symbol6" onclick="window.location.href='page6.html'">
+              <img src="src/assets/images/mangrove.png" alt="Mangrove">
+            </div>
+        </div>
+        
+    <script src="src/js/introduction.js"></script>
+    <script src="src/js/map.js"></script>
 </body>
 </html>
