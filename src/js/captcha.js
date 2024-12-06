@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupBtn = document.getElementById("popup-btn");
     const startPopup = document.getElementById("start-popup");
     const startBtn = document.getElementById("start-btn");
-    const testA = document.querySelector(".test"); // Utilisation de querySelector pour un seul élément
 
     let score = 0;
     const gameDuration = 15000;
     const requiredScore = 10;
     let gameRunning = false;
+
+    // Tableau pour stocker les noms des images manquées
+    const missedImages = [];
 
     const fishImages = [
         "fish1.png", "fish2.png", "fish3.png", "fish4.png", "fish5.png",
@@ -33,24 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
         boxImg.src = `src/assets/images/fish&&trash/${imageSrc}`;
         boxImg.className = "boxImg";
         boxImg.dataset.type = isFish ? "fish" : "trash";
+        boxImg.dataset.name = imageSrc; // Stocker le nom de l'image
 
         boxImg.addEventListener("dragstart", (e) => e.preventDefault());
         randomTile.appendChild(boxImg);
 
         let position = 0;
         const interval = setInterval(() => {
-            if (!gameRunning && position >= 100) {
-                clearInterval(interval);
-                randomTile.removeChild(boxImg);
-                return;
-            }
-
             position += 2;
             boxImg.style.top = position + "%";
 
+            // Si l'image atteint le bas (position >= 100)
             if (position >= 100) {
                 clearInterval(interval);
 
+                // Ajouter le nom de l'image dans le tableau des images manquées
+                missedImages.push(boxImg.dataset.name);
+
+                // Vérifier si le jeu est encore en cours
                 if (gameRunning) {
                     randomTile.removeChild(boxImg);
                     if (boxImg.dataset.type === "fish") {
@@ -59,10 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         score -= 1;
                     }
                     updateScore();
+                } else {
+                    // Si le jeu est fini, laisser l'image intacte
+                    randomTile.removeChild(boxImg);
                 }
             }
         }, 50);
 
+        // Si l'image est cliquée
         boxImg.addEventListener("click", () => {
             clearInterval(interval);
             randomTile.removeChild(boxImg);
@@ -89,15 +95,31 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             clearInterval(gameInterval);
             gameRunning = false;
+
+            // Laisser les images restantes descendre et enregistrer leur nom
+            document.querySelectorAll(".boxImg").forEach((img) => {
+                missedImages.push(img.dataset.name);
+            });
+
             setTimeout(() => {
                 popup.classList.remove("hidden");
-                popup.style.display = "block"; // Assurez-vous que le popup s'affiche
+                popup.style.display = "block";
+
+                // Afficher les résultats
                 if (score >= requiredScore) {
                     popupMessage.textContent = "Félicitations, vous avez réussi !";
                     popupBtn.textContent = "Continuer";
-                    popupBtn.onclick = () => window.location.href = "success.html";
+                    console.log("Images manquées :", missedImages);
+                    popupBtn.onclick = () => {
+                        window.location.href = "ergonomie.html";
+                    };
                 } else {
-                    popupMessage.textContent = "Échec, veuillez réessayer.";
+                    popupMessage.textContent = `Échec, veuillez réessayer.\nImages manquées : ${missedImages.length}`;
+                    missedImages.forEach((imageName) => {
+                        const missedImgElement = document.createElement("p");
+                        missedImgElement.textContent = imageName; // Afficher le nom
+                        popup.appendChild(missedImgElement);
+                    });
                     popupBtn.textContent = "Recommencer";
                     popupBtn.onclick = () => location.reload();
                 }
@@ -107,3 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startBtn.addEventListener("click", startGame);
 });
+

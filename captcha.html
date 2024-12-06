@@ -8,12 +8,12 @@
     <script src="src\js\captcha.js"></script>
 </head>
 <body>
-    <div class="background">
-        <img src="src/assets/images/background3.png" alt="" class="imgBackground2">
-        <img src="src/assets/images/background2.png" alt="" class="imgBackground1">
-        <img src="src/assets/images/background1.png" alt="" class="imgBackground1">
-    </div>
     <div class="score">Score : <span id="score">0</span></div>
+    <div class="background">
+        <img src="src/assets/images/background3.png" alt="" class="imgBackground2" id="bg1">
+        <img src="src/assets/images/background2.png" alt="" class="imgBackground1" id="bg2">
+        <img src="src/assets/images/background1.png" alt="" class="imgBackground1" id="bg3">
+    </div>
     <div class="fishtiles">
         <div class="tiles"></div>
         <div class="tiles"></div>
@@ -30,7 +30,6 @@
         </ul>
         <button id="start-btn">Commencer</button>
     </div>
-
     <div id="popup" class="hidden">
         <p id="popup-message"></p>
         <button id="popup-btn"></button>
