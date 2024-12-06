@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #095683, #08476D 45%, #074163 60%, #052B42 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cacher la barre de défilement pour les navigateurs basés sur WebKit */
+body::-webkit-scrollbar {
+    display: none;  /* Masque la barre de défilement */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1, h2, h3 {
+    color: #006c4f;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+    font-size: 1.4em;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+
+/* Positionner la boussole en bas à droite */
+.compass-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.compass {
+    width: 80px;
+    height: 80px;
+}
