@@ -1,32 +1,29 @@
+/* Hide scrollbars */
 body::-webkit-scrollbar {
     display: none;
 }
-  
 
 body {
     width: 99.9vw;
-    height: 120vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-.fishtiles{
-    position: absolute; /* Position absolue par rapport à .container */
-    top: 3vh;
-    left: 0;
+.fishtiles {
     width: 40%;
     height: 60%;
     margin-top: 3%;
     margin: 3% 28% 0 28%;
     display: flex;
     border-right: solid 2px black;
-    z-index: 10; 
-    background-color:  rgba(#45a049af);
-    
+    position: absolute;
 }
 
-.tiles{
+.tiles {
     width: 20%;
     height: 100%;
     border-left: solid 2px black;
@@ -35,18 +32,25 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    background-color: rgba(122, 166, 255, 0.19);
 }
 
-#boxImg {
+.parallax {
+    border-top: solid 2px black;
+    background-color: blue;
+    width: 100%;
+    height: 20%;
+}
+
+.boxImg {
     background-color: yellow;
     width: 80%;
-    height: 20%;
+    height: auto;
     border: solid 1px black;
     border-radius: 5px;
     position: absolute;
     transition: top 0.05s linear;
 }
+
 .boxImg img {
     width: 100%;
     height: 100%;
@@ -54,17 +58,14 @@ body {
     display: block;
 }
 
-
 .score {
     font-size: 1.5rem;
     text-align: center;
     margin: 10px;
-    position: absolute; /* Position absolue par rapport à .container */
-    top: 0;
-    left: 44vw;
 }
 
-#popup {
+/* Start Popup */
+#start-popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -76,13 +77,45 @@ body {
     z-index: 10;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: none; /* Caché par défaut */
+}
+
+#start-popup p {
+    font-size: 1.2rem;
+}
+
+#start-popup button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-popup button:hover {
+    background-color: #45a049;
+}
+
+/* End Popup */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    display: none; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #popup.hidden {
-    display: none; /* Utilisation uniforme avec JavaScript */
+    display: none; 
 }
-
 
 #popup p {
     font-size: 1.5rem;
@@ -101,6 +134,7 @@ body {
 
 #popup button:hover {
     background-color: #45a049;
+
 }
 .background {
     height: 100vh;
