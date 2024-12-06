@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rôle des Mangroves et des Coraux dans l'Écosystème Marin</title>
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src\css\map.css">
+</head>
+<body>
+    <div class="container">
+        <section class="intro">
+            <h1>Le Rôle des Mangroves et des Coraux dans l'Écosystème Marin</h1>
+            <p>Les mangroves et les coraux jouent un rôle fondamental dans la protection de l'écosystème marin, tout comme le cœur et les courants marins sont essentiels pour la circulation et la régulation dans le corps humain.</p>
+        </section>
+
+        <section class="defintion">
+            <h2>Mangroves et Coraux : Définition et Rôle</h2>
+            <div class="content">
+                <h3>Les Mangroves</h3>
+                <p>Les mangroves sont des écosystèmes côtiers formés par des arbres et des plantes adaptées à vivre dans des eaux salées ou saumâtres. Elles jouent un rôle clé dans la protection des côtes contre l'érosion, en stabilisant le sol et en offrant un refuge pour de nombreuses espèces marines et terrestres.</p>
+
+                <h3>Les Coraux</h3>
+                <p>Les récifs coralliens sont formés par des colonies de coraux, des animaux marins qui se nourrissent de plancton. Ils créent des structures sous-marines complexes qui offrent un habitat riche et diversifié pour de nombreuses espèces marines. Les coraux jouent également un rôle crucial dans l'équilibre des écosystèmes marins en régulant les populations de divers organismes marins.</p>
+            </div>
+        </section>
+
+        <section class="utilite">
+            <h2>Utilité des Mangroves et des Coraux dans l'Écosystème Marin</h2>
+            <div class="content">
+                <h3>Protection des Côtes</h3>
+                <p>Les mangroves agissent comme une barrière naturelle contre les vagues, les tempêtes et l'érosion côtière. Elles stabilisent les sols et préservent les habitats côtiers essentiels pour de nombreuses espèces.</p>
+
+                <h3>Régulation des Populations Maritimes</h3>
+                <p>Les coraux sont un élément central de l'écosystème marin, contribuant à la régulation des populations de poissons, de crustacés et d'autres espèces marines. Ils servent également de nurseries pour de nombreuses espèces marines, assurant ainsi la pérennité des écosystèmes sous-marins.</p>
+
+                <h3>Biodiversité</h3>
+                <p>Les mangroves et les récifs coralliens abritent une incroyable diversité de vie marine. Ces écosystèmes soutiennent des centaines d'espèces différentes, allant des petits poissons aux grands prédateurs marins, en passant par une multitude d'invertébrés.</p>
+            </div>
+        </section>
+
+        <section class="parallele">
+            <h2>Parallèle avec le Système Circulatoire Humain</h2>
+            <p>Le rôle des mangroves et des coraux dans l'écosystème marin peut être comparé à celui du foie et du cœur dans le corps humain, respectivement en termes de filtration, de protection et de régulation des fluides vitaux.</p>
+            <div class="content">
+                <h3>1. Filtration et Purification</h3>
+                <p>Tout comme le foie filtre et détoxifie le sang, les mangroves filtrent les polluants et régulent la qualité de l'eau. De la même manière, les coraux, par leur structure, permettent de réguler la population d'organismes marins, contribuant à un équilibre écologique.</p>
+
+                <h3>2. Protection et Circulation</h3>
+                <p>Le cœur est responsable de la circulation du sang dans tout le corps. De manière similaire, les courants marins permettent la circulation des nutriments et de l'oxygène dans l'océan, facilitant le maintien de l'équilibre écologique. Les mangroves, tout comme le cœur, jouent un rôle de protection, en préservant la côte et les habitats marins contre les conditions climatiques extrêmes.</p>
+
+                <h3>3. Maintien de l'Équilibre</h3>
+                <p>Le foie régule le métabolisme et l'équilibre chimique du corps, tandis que les mangroves et les coraux régulent les populations d'organismes marins et assurent un environnement sain pour la biodiversité. Les deux systèmes jouent des rôles essentiels dans le maintien d'un équilibre crucial pour la survie de l'ensemble de l'écosystème.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Image de la boussole -->
+    <div class="compass-container">
+        <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+    </div>
+    
+    <!-- Carte modale -->
+    <div id="mapModal" class="map-container" >
+        <!-- Image de la carte -->
+        <img src="src\assets\images\map.png" alt="Carte">
+  
+        <!-- Symboles sur la carte -->
+        <div class="symbol symbol1" onclick="window.location.href='algue.html'">
+          <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+        </div>
+        <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
+          <img src="src/assets/images/huitre.png" alt="huitre">
+        </div>
+        <div class="symbol symbol3" onclick="window.location.href='courant.html'">
+          <img src="src/assets/images/courant.png" alt="courant">
+        </div>
+        <div class="symbol symbol4" onclick="window.location.href='corail.html'">
+          <img src="src/assets/images/corail.png" alt="corail">
+        </div>
+        <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
+          <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+        </div>
+        <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
+          <img src="src/assets/images/mangrove.png" alt="Mangrove">
+        </div>
+    </div>
+    <script src="src/js/map.js"></script>
+</body>
+</html>

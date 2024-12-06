@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Rôle des Algues et du Phytoplancton dans l'Océan</title>
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src\css\map.css">
+</head>
+<body>
+    <div class="container">
+        <section class="intro">
+            <h1>Le Rôle Crucial des Algues et du Phytoplancton dans l'Écosystème Océanique</h1>
+            <p>Les algues et le phytoplancton jouent un rôle crucial dans l'écosystème océanique, et leur fonction peut en effet être comparée à celle des poumons dans le corps humain, en termes d'absorption et de production d'oxygène.</p>
+        </section>
+
+        <section class="defintion">
+            <h2>Phytoplancton et Algues : Définition et Rôle</h2>
+            <div class="content">
+                <h3>Phytoplancton</h3>
+                <p>Ce sont des organismes microscopiques qui flottent dans la couche supérieure de l'océan. Il est constitué principalement de plantes microscopiques (comme les diatomées, les dinoflagellés et les cyanobactéries). Le phytoplancton effectue la photosynthèse, un processus où il utilise la lumière du soleil pour produire de l'oxygène et du glucose à partir du dioxyde de carbone (CO2) et de l'eau.</p>
+
+                <h3>Algues</h3>
+                <p>Les algues sont un groupe de plantes aquatiques qui comprennent des organismes microscopiques (comme le phytoplancton) ainsi que des formes plus grandes, comme les algues brunes, rouges et vertes. Les algues, tout comme le phytoplancton, effectuent également la photosynthèse et contribuent de manière significative à la production d'oxygène.</p>
+            </div>
+        </section>
+
+        <section class="utilite">
+            <h2>Utilité dans l'Océan</h2>
+            <div class="content">
+                <h3>Production d'oxygène</h3>
+                <p>Le phytoplancton est responsable de près de 50 % de la production d'oxygène sur Terre. Cela signifie que, tout comme les poumons humains fournissent de l'oxygène au corps, le phytoplancton fournit de l'oxygène à l'ensemble de la planète, en particulier aux organismes marins.</p>
+
+                <h3>Régulation du CO2</h3>
+                <p>Les algues et le phytoplancton jouent également un rôle crucial dans la réduction des niveaux de dioxyde de carbone (CO2) dans l'atmosphère, en absorbant ce gaz à effet de serre pendant la photosynthèse. Cela aide à atténuer les effets du changement climatique.</p>
+
+                <h3>Base de la chaîne alimentaire marine</h3>
+                <p>Le phytoplancton est à la base de la chaîne alimentaire océanique. Il est la principale source de nourriture pour une multitude d'organismes marins, des petits crustacés aux poissons, en passant par les baleines.</p>
+            </div>
+        </section>
+
+        <section class="parallele">
+            <h2>Parallèle avec les Poumons Humains</h2>
+            <p>Le parallèle entre le phytoplancton/algues et les poumons humains peut se faire de plusieurs façons :</p>
+            <div class="content">
+                <h3>1. Échange Gazeux (CO2 et O2)</h3>
+                <p>Les poumons humains absorbent l'oxygène de l'air et rejettent le dioxyde de carbone (CO2) lors de la respiration. De même, le phytoplancton et les algues absorbent le CO2 dissous dans l'eau et libèrent de l'oxygène pendant la photosynthèse. Ces échanges gazeux sont vitaux pour maintenir l'équilibre des gaz dans l'atmosphère et l'océan.</p>
+
+                <h3>2. Production d'Oxygène</h3>
+                <p>Tout comme les poumons fournissent de l'oxygène au corps humain, le phytoplancton et les algues fournissent de l'oxygène aux océans et à l'atmosphère, permettant la vie dans les mers et sur Terre.</p>
+
+                <h3>3. Régulation de l'Équilibre</h3>
+                <p>Les poumons régulent les niveaux de CO2 dans le corps humain, permettant de maintenir une respiration efficace. Le phytoplancton et les algues jouent un rôle similaire dans la régulation du CO2 dans l'atmosphère et les océans, en réduisant les concentrations de ce gaz, ce qui aide à limiter le réchauffement climatique.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Image de la boussole -->
+    <div class="compass-container">
+        <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+    </div>
+    
+    <!-- Carte modale -->
+    <div id="mapModal" class="map-container" >
+        <!-- Image de la carte -->
+        <img src="src\assets\images\map.png" alt="Carte">
+  
+        <!-- Symboles sur la carte -->
+        <div class="symbol symbol1" onclick="window.location.href='algue.html'">
+          <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+        </div>
+        <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
+          <img src="src/assets/images/huitre.png" alt="huitre">
+        </div>
+        <div class="symbol symbol3" onclick="window.location.href='courant.html'">
+          <img src="src/assets/images/courant.png" alt="courant">
+        </div>
+        <div class="symbol symbol4" onclick="window.location.href='corail.html'">
+          <img src="src/assets/images/corail.png" alt="corail">
+        </div>
+        <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
+          <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+        </div>
+        <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
+          <img src="src/assets/images/mangrove.png" alt="Mangrove">
+        </div>
+    </div>
+
+    <script src="src/js/map.js"></script>
+</body>
+</html>

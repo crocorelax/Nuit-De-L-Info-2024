@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rôle des Mangroves et Coraux dans l'Écosystème Marin</title>
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src\css\map.css">
+</head>
+<body>
+    <div class="container">
+        <section class="intro">
+            <h1>Le Rôle des Mangroves et des Coraux dans l'Écosystème Marin</h1>
+            <p>Les mangroves et les coraux jouent un rôle fondamental dans l'écosystème marin, en protégeant les côtes et en créant des habitats pour de nombreuses espèces marines. Leur fonction peut être comparée à celle du foie humain, en raison de leur rôle dans la filtration et la régulation de l'environnement marin.</p>
+        </section>
+
+        <section class="defintion">
+            <h2>Les Mangroves et les Coraux : Définition et Rôle</h2>
+            <div class="content">
+                <h3>Les Mangroves</h3>
+                <p>Les mangroves sont des écosystèmes côtiers uniques composés d'arbres et de plantes adaptées aux environnements salins et boueux. Elles jouent un rôle essentiel en protégeant les côtes contre l'érosion, en filtrant les polluants et en servant de nurserie pour de nombreuses espèces marines.</p>
+
+                <h3>Les Coraux</h3>
+                <p>Les coraux sont des animaux marins qui forment des récifs. Ces récifs coralliens, en plus d'être un habitat pour une grande variété d'organismes marins, jouent un rôle crucial dans la protection des côtes en atténuant la force des vagues. Les coraux sont aussi impliqués dans des processus de filtration des nutriments présents dans l'eau.</p>
+            </div>
+        </section>
+
+        <section class="utilite">
+            <h2>Utilité dans l'Écosystème Marin</h2>
+            <div class="content">
+                <h3>Protection des Côtes</h3>
+                <p>Les mangroves et les coraux offrent une protection naturelle aux côtes en réduisant l'impact des vagues et des tempêtes. Les racines des mangroves stabilisent le sol et préviennent l'érosion, tandis que les récifs coralliens agissent comme des boucliers contre les vagues, réduisant ainsi les risques de dommages pour les zones côtières.</p>
+
+                <h3>Filtration des Nutriments</h3>
+                <p>Les mangroves et les coraux jouent un rôle important dans la filtration des nutriments et des polluants. Les racines des mangroves captent les sédiments et les polluants dans l'eau, tandis que les coraux régulent la qualité de l'eau en filtrant les excès de nutriments et en maintenant un équilibre écologique crucial pour les espèces marines.</p>
+
+                <h3>Habitat et Biodiversité</h3>
+                <p>Les mangroves et les récifs coralliens sont des habitats critiques pour de nombreuses espèces marines, des poissons aux crustacés. Ces écosystèmes favorisent la biodiversité en offrant des zones de reproduction et de refuge pour les jeunes poissons et autres organismes marins.</p>
+            </div>
+        </section>
+
+        <section class="parallele">
+            <h2>Parallèle avec le Foie Humain</h2>
+            <p>Le rôle des mangroves et des coraux dans l'écosystème marin peut être comparé à celui du foie humain, qui agit comme un filtre et un régulateur pour maintenir un environnement interne sain. Les mangroves et les coraux filtrent et régulent l'eau de mer de la même manière que le foie régule et filtre le sang.</p>
+            <div class="content">
+                <h3>1. Filtration des Polluants</h3>
+                <p>Tout comme le foie filtre les toxines et les déchets du corps, les mangroves et les coraux filtrent les polluants et les excès de nutriments dans l'eau. Cela permet de maintenir un environnement sain pour les autres espèces marines et de protéger l'écosystème côtier.</p>
+
+                <h3>2. Régulation de l'Équilibre</h3>
+                <p>Le foie régule l'équilibre des nutriments et des toxines dans le corps, tout comme les mangroves et les coraux régulent les niveaux de nutriments dans l'eau de mer. Ces processus sont essentiels pour maintenir un environnement stable et propice à la vie marine.</p>
+
+                <h3>3. Support de la Vie</h3>
+                <p>Le foie est essentiel à la santé et au bien-être du corps humain en soutenant les fonctions corporelles. De manière similaire, les mangroves et les coraux soutiennent la vie marine en fournissant des habitats, en régulant la qualité de l'eau et en protégeant les côtes contre les impacts environnementaux.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Image de la boussole -->
+    <div class="compass-container">
+        <img src="src\assets\images\boussole.png" alt="Boussole" class="compass" onclick="openMap()">
+    </div>
+    
+    <!-- Carte modale -->
+    <div id="mapModal" class="map-container" >
+        <!-- Image de la carte -->
+        <img src="src\assets\images\map.png" alt="Carte">
+  
+        <!-- Symboles sur la carte -->
+        <div class="symbol symbol1" onclick="window.location.href='algue.html'">
+          <img src="src/assets/images/algue et phytoplankton.png" alt="algue et phytoplankton">
+        </div>
+        <div class="symbol symbol2" onclick="window.location.href='huitre.html'">
+          <img src="src/assets/images/huitre.png" alt="huitre">
+        </div>
+        <div class="symbol symbol3" onclick="window.location.href='courant.html'">
+          <img src="src/assets/images/courant.png" alt="courant">
+        </div>
+        <div class="symbol symbol4" onclick="window.location.href='corail.html'">
+          <img src="src/assets/images/corail.png" alt="corail">
+        </div>
+        <div class="symbol symbol5" onclick="window.location.href='bacterie.html'">
+          <img src="src/assets/images/bacteries et orga decomposeurs.png" alt="bacteries et orga decomposeurs">
+        </div>
+        <div class="symbol symbol6" onclick="window.location.href='mangrove.html'">
+          <img src="src/assets/images/mangrove.png" alt="Mangrove">
+        </div>
+    </div>
+    <script src="src/js/map.js"></script>
+</body>
+</html>
