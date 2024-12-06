@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src\css\captcha.css">
-    <script src=""></script>
+    <script src="src\js\captcha.js"></script>
 </head>
-<body> 
+<body>
+    <div class="score">Score : <span id="score">0</span></div>
     <div class="fishtiles">
-        <div class="tiles">
-            <div class="boxImg"></div>
-            <div class="boxImg"></div>
-        </div>
         <div class="tiles"></div>
         <div class="tiles"></div>
         <div class="tiles"></div>
         <div class="tiles"></div>
+        <div class="tiles"></div>
+    </div>
 
+    <div id="popup" class="hidden">
+        <p id="popup-message"></p>
+        <button id="popup-btn"></button>
     </div>
     <div class="parallax">
 
