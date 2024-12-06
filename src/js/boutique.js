@@ -53,9 +53,9 @@ function applyItemEffect(item) {
             } 
             
             // Si toutes les zones sont dépolluées
-            if (depollutedAreas === 5) {
+            else {
                 alert("Félicitations, toutes les zones sont dépolluées !");
-                window.location.href = "/path/to/credit.html"; // Chemin relatif vers votre page des crédits
+                window.location.href = "credit.html"; // Chemin relatif vers votre page des crédits
             }
 
             // Met à jour l'affichage des réalisations
