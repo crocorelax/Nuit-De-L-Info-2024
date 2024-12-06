@@ -50,6 +50,8 @@ function applyItemEffect(item) {
                 localStorage.setItem('depollutedAreas', depollutedAreas);
             } else {
                 alert('Toutes les zones sont déjà dépolluées !');
+                window.location.href = "/path/to/credit.html";
+
             }
             // Met à jour l'affichage
             updateAchievementsDisplay(depollutedAreas);
