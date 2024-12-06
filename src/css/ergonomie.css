@@ -1,0 +1,163 @@
+
+@font-face {
+    font-family: 'OCR';
+    src: url('/src/assets/polices/OCRA.otf') format('opentype');
+}
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+body{
+    font-family:'OCR','Arial', 'Helvetica', 'sans-serif';
+    background: linear-gradient(90deg, #0084ffa8, #0044ffa8);
+    background-size: 400% 400%;
+    overflow: hidden;
+    animation: gradientAnimation 10s infinite;
+}
+.d20{
+    display: none;
+    height: 100px;
+    width: 100px;
+}
+.boite{
+    width: 100px;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.randomD20{
+    display: none;
+}
+.boite span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.b1g1{
+    display: flex;
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #2875bd88;
+}
+.b2g1{
+    display: none;
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #28bd3c88;
+}
+.b3g1{
+    display:none;
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #b4131388;
+}
+.b4g1{
+    display: none;
+    font-family:'OCR';
+    border-radius: 10px;
+}
+.b1g2{
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #b4131388;
+}
+.b2g2{
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #cf383850;
+}
+.b3g2{
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #6ac53649; 
+}
+.b4g2{
+    font-family:'OCR';
+    border-radius: 3px; 
+    background-color: #5dd11b88; 
+}
+.b1g3{
+    font-family:'OCR';
+    border-radius: 3px;
+    background-color: #1ec50fb2;
+} 
+.bouttonsG1{
+    margin-top: 10px;
+    gap:10px;
+    display: flex;
+    border-radius: 3px;
+}
+.bouttonsG2{
+    margin-top: 10px;
+    gap:10px;
+    display: flex;
+    border-radius: 3px;
+}
+.bouttonsG3{
+    margin-top: 10px;
+    gap:10px;
+    display: flex;
+    border-radius: 3px;
+}
+.chartre{
+    margin-top:20px;
+    display: block;
+    width: 400px;
+    list-style: none;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px #000000;
+}
+.titre{
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.instruction{
+    font-size: 14px;
+}
+.donnes{
+    margin-top:20px;
+    display: block;
+    width: 400px;
+    list-style: none;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px #000000;
+}
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: #c6d9dfb9;
+    box-shadow: 0px 0px 7px #1c84e6da;
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(0.5);
+      opacity: 0;
+    }
+  }

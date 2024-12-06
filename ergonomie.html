@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ergonomie</title>
+        <link rel="stylesheet" href="/src/css/ergonomie.css">
+        
+    </head>
+    <body>
+        <header>
+            <h1>Bonjour, identifiez-vous :</h1>
+        </header>
+        <main>
+            <div class="boite" id="boite">
+                <img class="d20" id="d20" src="/src/assets/images/D20.png" alt="D20">
+                <span class="randomD20" id="randomD20"></span>
+            </div>
+            <div class="bouttonsG1">
+                <button class="b1g1" id="b1g1" onclick="genererAleatoire()">Lancer !</button>
+                <button class="b2g1" id="b2g1" onclick="AjouterLettre()"> Valider la lettre </button>
+                <button class="b3g1" id="b3g1" onclick="supprimerLettre()">Supprimer une lettre</button>
+                <button class="b4g1" id="b4g1" onclick="cacherbouttonsG1()">X</button>
+            </div>
+            <div class="donnes">
+                <p>Pseudo :<span id="Chaine"></span></p>
+                <p>Age :<span id="Age"></span></p>
+            </div>
+            <div class="bouttonsG2">
+                <button class="b1g2" id="b1g2" onclick="sous10()">-10</button>
+                <button class="b2g2" id="b2g2" onclick="sous1()">-1</button>
+                <button class="b3g2" id="b3g2" onclick="add1()">+1</button>
+                <button class="b4g2" id="b4g2" onclick="add10()">+10</button>
+                
+            </div>
+            <div class="bouttonsG3">
+                <button class="b1g3" id="b1g3" onclick="valider()">Valider</button>
+            </div>
+            <div class="chartre">
+                <li class="titre">Instructions :</li>
+                <li class="instruction"> 
+                    Vous devrez entrer votre pseudo à l'aide d'un dé à 26 faces,
+                     chaque face correspondant à une lettre de l'alphabet, dans l'ordre alphabétique.
+                      Si vous vous trompez, pas de panique, vous pouvez supprimer à l'aide du troisième bouton.
+                       Veuillez entrer votre âge en jours à l'aide des deux boutons ci-dessous. Merci, les devs.
+                </li>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <audio id="soundEffect" src="/src/assets/music/D20-sound.mp3" preload="auto"></audio>
+        <script src="/src/js/ergonomie.js"></script>
+    </body> 
+</html>
