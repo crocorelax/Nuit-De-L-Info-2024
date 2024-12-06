@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    background-color: rgba(122, 166, 255, 0.275);
+    background-color: rgba(122, 166, 255, 0.19);
 }
 
 #boxImg {
